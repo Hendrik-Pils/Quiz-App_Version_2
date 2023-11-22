@@ -13,6 +13,58 @@ toggleButton.addEventListener("click", () => {
 const bookmarkButton = document.querySelector('[data-js="bookmark"]');
 
 bookmarkButton.addEventListener("click", () => {
-    bookmark.classList.toggle("bookmark--active");
+    bookmarkButton.classList.toggle("bookmark--active");
     console.log(bookmark.classList)
 });
+
+/*
+const form = document.querySelector('[data-js="form"]');
+const tosError = document.querySelector('[data-js="tos-error"]');
+const tosCheckbox = document.querySelector('[data-js="tos"]');
+const success = document.querySelector('[data-js="success"]');
+
+function hideAnswer() {
+  tosError.setAttribute("hidden", "");
+}
+
+function showAnswer() {
+  tosError.removeAttribute("hidden");
+}
+
+function hideSuccess() {
+  success.setAttribute("hidden", "");
+}
+
+function showSuccess() {
+  success.removeAttribute("hidden");
+}
+
+if (tosCheckbox.checked == true && form.submitted == true) {
+  showSuccess();
+} else {
+  hideSuccess();
+}
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  // --v-- write your code here --v--
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+
+  console.log(data);
+  // --^-- write your code here --^--
+  if (tosCheckbox.checked == true)
+    // eslint-disable-next-line no-alert
+    alert("Form submitted");
+  return;
+});
+
+tosCheckbox.addEventListener("click", () => {
+  if (tosCheckbox.checked == true) {
+    hideTosError();
+  } else {
+    showTosError();
+  }
+});
+*/

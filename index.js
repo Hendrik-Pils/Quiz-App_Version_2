@@ -13,22 +13,43 @@ toggleButton.addEventListener("click", () => {
 const bookmarkButton = document.querySelector('[data-js="bookmark"]');
 
 bookmarkButton.addEventListener("click", () => {
-    bookmarkButton.classList.toggle("bookmark--active");
-    console.log(bookmark.classList)
+    bookmarkButton.classList.toggle("bookmark--active")
 });
 
+const cardAnswer= document.querySelector('[data-js="card__answer"]')
+const buttonAnswer = document.querySelector('[data-js="card__button-answer"]');
+
+buttonAnswer.addEventListener("click", () => {
+  cardAnswer.classList.toggle("hidden")
+  if (buttonAnswer.textContent === "Hide Answer") {
+    buttonAnswer.textContent = "Show Answer";
+  } else {
+    buttonAnswer.textContent = "Hide Answer"
+  }
+});
+
+
+
+
+function hideAnswer() {
+  cardAnswer.setAttribute("hidden", "");
+}
+
+function showAnswer() {
+  cardAnswer.removeAttribute("hidden");
+}
 /*
 const form = document.querySelector('[data-js="form"]');
-const tosError = document.querySelector('[data-js="tos-error"]');
+;
 const tosCheckbox = document.querySelector('[data-js="tos"]');
 const success = document.querySelector('[data-js="success"]');
 
 function hideAnswer() {
-  tosError.setAttribute("hidden", "");
+  cardAnswer.setAttribute("hidden", "");
 }
 
 function showAnswer() {
-  tosError.removeAttribute("hidden");
+  cardAnswer.removeAttribute("hidden");
 }
 
 function hideSuccess() {

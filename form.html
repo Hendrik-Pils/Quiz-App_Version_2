@@ -10,45 +10,32 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="header__title">Bookmarks</h1>
+      <h1 class="header__title">Quiz-App</h1>
     </header>
-    <main>
-      <ul class="card-list">
-        <li class="card-list__item">
-          <article class="card">
-            <h2 class="card__question">
-              Daniel Radcliffe became a global star in the film industry due to
-              his performance in which film franchise?
-            </h2>
-            <button class="card__button-answer" type="button">
-              Show answer
-            </button>
-            <p class="card__answer">Harry Potter</p>
-            <ul class="card__tag-list">
-              <li class="card__tag-list-item">#danielradcliffe</li>
-              <li class="card__tag-list-item">#hewhomustnotbenamed</li>
-              <li class="card__tag-list-item">#abracadabra</li>
-            </ul>
-            <div class="card__button-bookmark">
-              <button
-                class="bookmark bookmark--active"
-                aria-label="bookmark"
-                type="button"
-              >
-                <svg
-                  class="bookmark__icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewbox="0 0 24 24"
-                >
-                  <path
-                    d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </article>
-        </li>
-      </ul>
+    <main class="questions">
+        <form data-js="form">
+            <label for="question">Your question:</label>
+          <textarea
+            name="question"
+            id="question"
+            placeholder="Please consider a Question!"
+          ></textarea>
+          <label for="answer">Your answer:</label>
+          <textarea
+            name="answer"
+            id="answer"
+            placeholder="Please consider an Answer!"
+          ></textarea>
+          <label for="tags">Tags:</label>
+          <input
+            type="text"
+            name="tags"
+            id="tags"
+            placeholder="Tags"
+            required
+          />
+          <button type="submit">Submit</button>
+        </form>
     </main>
 
     <nav class="navigation">
@@ -71,7 +58,7 @@
             </svg>
           </a>
         </li>
-        <li class="navigation__list-item navigation__list-item--active">
+        <li class="navigation__list-item">
           <a
             class="navigation__link"
             href="/bookmarks.html"
@@ -89,15 +76,15 @@
             </svg>
           </a>
         </li>
-        <li class="navigation__list-item">
-          <a
-            class="navigation__link"
-            href="/form.html"
-            aria-label="go to home page"
-          >
-          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11.5 0c6.347 0 11.5 5.153 11.5 11.5s-5.153 11.5-11.5 11.5-11.5-5.153-11.5-11.5 5.153-11.5 11.5-11.5zm0 1c5.795 0 10.5 4.705 10.5 10.5s-4.705 10.5-10.5 10.5-10.5-4.705-10.5-10.5 4.705-10.5 10.5-10.5zm.5 10h6v1h-6v6h-1v-6h-6v-1h6v-6h1v6z"/></svg>
-          </a>
-        </li>
+        <li class="navigation__list-item navigation__list-item--active">
+            <a
+              class="navigation__link"
+              href="/form.html"
+              aria-label="go to home page"
+            >
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11.5 0c6.347 0 11.5 5.153 11.5 11.5s-5.153 11.5-11.5 11.5-11.5-5.153-11.5-11.5 5.153-11.5 11.5-11.5zm0 1c5.795 0 10.5 4.705 10.5 10.5s-4.705 10.5-10.5 10.5-10.5-4.705-10.5-10.5 4.705-10.5 10.5-10.5zm.5 10h6v1h-6v6h-1v-6h-6v-1h6v-6h1v6z"/></svg>
+            </a>
+          </li>
         <li class="navigation__list-item">
           <a
             class="navigation__link"

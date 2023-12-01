@@ -1,13 +1,14 @@
 .questions {
+  display: block;
   padding: 10rem 6rem 8rem 6rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 
-.questions > * {
-  margin: 0 0 2rem;
+.questions > form > ul {
+  justify-content: center;
+}
+
+.questions > form > ul > li {
+  justify-content: center;
 }
 
 .profile__settings-darkmode-input {

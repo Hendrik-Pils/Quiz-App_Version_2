@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./index.js" defer></script>
+    <script src="./form.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -14,18 +14,31 @@
     </header>
     <main class="questions">
         <form data-js="form">
+          <ul><li>
             <label for="question">Your question:</label>
           <textarea
             name="question"
             id="question"
+            data-js="question"
+            maxlength="150"
+            cols="24"
+            rows="4"
             placeholder="Please consider a Question!"
-          ></textarea>
+          ></textarea><small class="form__character-count"
+          >(<span data-js="amountLeft"></span> characters left)</small
+        ></li><li>
           <label for="answer">Your answer:</label>
           <textarea
             name="answer"
             id="answer"
+            data-js="answer"
+            maxlength="150"
+            cols="24"
+            rows="4"
             placeholder="Please consider an Answer!"
-          ></textarea>
+          ></textarea><small class="form__character-count"
+          >(<span data-js="amountLeft"></span> characters left)</small
+        ></li><li>
           <label for="tags">Tags:</label>
           <input
             type="text"
@@ -33,8 +46,9 @@
             id="tags"
             placeholder="Tags"
             required
-          />
-          <button type="submit">Submit</button>
+          /></li>
+          <li><button type="submit">Submit</button></li>
+          </ul>
         </form>
     </main>
 
